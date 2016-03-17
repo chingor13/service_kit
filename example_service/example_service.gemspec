@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'service_kit/version'
+require 'example_service/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "service_kit"
-  spec.version       = ServiceKit::VERSION
+  spec.name          = "example_service"
+  spec.version       = ExampleService::VERSION
   spec.authors       = ["Jeff Ching"]
   spec.email         = ["ching.jeff@gmail.com"]
 
-  spec.summary       = %q{Tools to abstract the logic of a service from how it's run.}
-  spec.description   = %q{Tools to abstract the logic of a service from how it's run.}
-  spec.homepage      = "https://github.com/chingor13/service_kit"
+  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
+  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
@@ -25,6 +25,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "service_kit"
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
