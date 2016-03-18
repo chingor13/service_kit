@@ -3,7 +3,7 @@ module ExampleService
 
     self.formatter = Formatter
 
-    get '/api/1/users', UsersIndex
+    register_route 'GET', '/api/1/users', UsersIndex
 
   end
 end

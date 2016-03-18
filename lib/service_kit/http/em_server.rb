@@ -7,7 +7,8 @@ module ServiceKit
     class EmServer < EM::HttpServer::Server
 
       class << self
-        attr_accessor :formatter, :routes
+        attr_writer :formatter
+        attr_accessor :routes
 
         def run(port: 8080)
           EM.run do
@@ -28,9 +29,12 @@ module ServiceKit
           routes[method] ||= {}
           routes[method][path] = endpoint
         end
+
+        def formatter
+          @formatter ||= JsonFormatter
+        end
       end
 
-      self.formatter = JsonFormatter
       self.routes = {}
 
       def process_http_request
