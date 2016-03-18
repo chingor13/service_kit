@@ -2,7 +2,6 @@ require 'eventmachine'
 require 'em-http-server'
 require 'pp'
 
-
 module ServiceKit
   class HttpServer < EM::HttpServer::Server
 

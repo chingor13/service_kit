@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in example_service-client.gemspec
+gemspec
+
+gem 'example_service-contract', path: '../example_service-contract'

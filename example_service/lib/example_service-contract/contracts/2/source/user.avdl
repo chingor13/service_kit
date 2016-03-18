@@ -1,0 +1,18 @@
+@namespace("ExampleService")
+
+protocol User {
+
+  /** The main class for this protocol */
+  record User {
+    /** The primary key */
+    int id;
+
+    /** The user's name */
+    string name;
+
+    /** Whether this user is disabled or not */
+    boolean disabled=false;
+  }
+
+  array<User> index();
+}

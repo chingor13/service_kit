@@ -1,0 +1,32 @@
+{
+  "protocol" : "User",
+  "namespace" : "ExampleService",
+  "types" : [ {
+    "type" : "record",
+    "name" : "User",
+    "doc" : "The main class for this protocol",
+    "fields" : [ {
+      "name" : "id",
+      "type" : "int",
+      "doc" : "The primary key"
+    }, {
+      "name" : "name",
+      "type" : "string",
+      "doc" : "The user's name"
+    }, {
+      "name" : "disabled",
+      "type" : "boolean",
+      "doc" : "Whether this user is disabled or not",
+      "default" : false
+    } ]
+  } ],
+  "messages" : {
+    "index" : {
+      "request" : [ ],
+      "response" : {
+        "type" : "array",
+        "items" : "User"
+      }
+    }
+  }
+}

@@ -6,3 +6,4 @@ gemspec
 # gem 'eventmachine'
 gem 'em-http-server'
 gem 'service_kit', path: "../"
+gem 'example_service-contract', path: "./lib/example_service-contract"
