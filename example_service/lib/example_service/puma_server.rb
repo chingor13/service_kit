@@ -1,10 +1,8 @@
 require 'sinatra/json'
 module ExampleService
-  class PumaServer < ServiceKit::SinatraServer
+  class PumaServer < ServiceKit::Http::SinatraServer
 
-    get '/api/1/users' do
-      json UsersIndex.new.call(params, {})
-    end
+    register_route 'GET', '/api/1/users', UsersIndex
 
   end
 end

@@ -1,5 +1,5 @@
 module ExampleService
-  class Server < ServiceKit::HttpServer
+  class Server < ServiceKit::Http::EmServer
 
     self.formatter = Formatter
 
