@@ -60,6 +60,18 @@ class MyServer < ServiceKit::HttpServer
 end
 ```
 
+Avro example:
+
+```ruby
+class MyServer < ServiceKit::AvroServer
+  ExampleService::Contract::Service.all.map{|version|
+    add_protocol version.protocol("user").send(:avro)
+  }
+
+  route "index", UsersIndex
+end
+```
+
 ### Run your server
 
 Create a bin script and in it start your server:
