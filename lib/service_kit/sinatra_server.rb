@@ -4,7 +4,7 @@ module ServiceKit
 
     class << self
       def run(port: 8081)
-        run!(port: port)
+        run!(port: port, bind: '0.0.0.0')
       end
     end
 
