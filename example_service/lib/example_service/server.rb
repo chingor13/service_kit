@@ -1,7 +1,7 @@
 module ExampleService
   class Server < ServiceKit::HttpServer
 
-    formatter Formatter
+    self.formatter = Formatter
 
     get '/api/1/users', UsersIndex
 
