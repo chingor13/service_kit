@@ -1,4 +1,5 @@
 require 'sinatra/json'
+require 'puma-stats-logger'
 module ExampleService
   class PumaServer < ServiceKit::Http::SinatraServer
 
