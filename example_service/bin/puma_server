@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "example_service"
+
+ExampleService::PumaServer.run(port: 8081)

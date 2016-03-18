@@ -7,4 +7,5 @@ module ServiceKit
   autoload :HttpServer, 'service_kit/http_server'
   autoload :Request, 'service_kit/request'
   autoload :Server, 'service_kit/server'
+  autoload :SinatraServer, 'service_kit/sinatra_server'
 end

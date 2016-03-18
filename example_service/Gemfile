@@ -7,3 +7,7 @@ gemspec
 gem 'em-http-server'
 gem 'service_kit', path: "../"
 gem 'example_service-contract', path: "./lib/example_service-contract"
+
+gem 'puma'
+gem 'sinatra'
+gem 'sinatra-contrib'
